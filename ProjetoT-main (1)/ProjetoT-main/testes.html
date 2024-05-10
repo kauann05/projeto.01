@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUnit Testes EletroSSAU</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.16.0.css">
+</head>
+<body>
+
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <script src="https://code.jquery.com/qunit/qunit-2.16.0.js"></script>
+  <script>
+    function cadastrarUsuario(usuario) {
+
+      if (usuario.nome && usuario.email && usuario.senha) {
+        return true; 
+      } else {
+        return false; 
+      }
+    }
+
+    function fazerLogin(credenciais) {
+      // Lógica de login do usuário
+      if (credenciais.email === 'usuario@teste.com' && credenciais.senha === '123456') {
+        return true; // Simula login bem-sucedido
+      } else {
+        return false; // Simula falha no login
+      }
+    }
+
+    function exibirProdutos() {
+      // Lógica de exibição de produtos
+      const produtos = [
+        { id: 1, nome: 'Produto 1', preco: 10 },
+        { id: 2, nome: 'Produto 2', preco: 20 },
+        { id: 3, nome: 'Produto 3', preco: 30 }
+      ];
+      return produtos; // Retorna uma lista fictícia de produtos
+    }
+
+    // Testes
+    QUnit.test('Cadastro de usuário válido', assert => {
+      const usuario = { nome: 'Usuário Teste', email: 'usuario@teste.com', senha: '123456' };
+      assert.strictEqual(cadastrarUsuario(usuario), true, 'Deve retornar true para um usuário com informações sem repetições');
+    });
+
+    QUnit.test('Tentativa de cadastro com campos obrigatórios vazios', assert => {
+      const usuario = { nome: '', email: '', senha: '' };
+      assert.strictEqual(cadastrarUsuario(usuario), false, 'Deve retornar false para campos obrigatórios vazios');
+    });
+
+    QUnit.test('Login de usuário com credenciais válidas', assert => {
+      const credenciais = { email: 'usuario@teste.com', senha: '123456' };
+      assert.strictEqual(fazerLogin(credenciais), true, 'Deve retornar true para credenciais válidas');
+    });
+
+    QUnit.test('Login de usuário com credenciais inválidas', assert => {
+      const credenciais = { email: 'usuario@teste.com', senha: 'senha_incorreta' };
+      assert.strictEqual(fazerLogin(credenciais), false, 'Deve retornar false para credenciais inválidas');
+    });
+
+    QUnit.test('Exibição de produtos', assert => {
+      const produtos = exibirProdutos();
+      assert.strictEqual(produtos.length, 3, 'Deve retornar uma lista de 3 produtos');
+      assert.strictEqual(produtos[0].nome, 'Produto 1', 'O primeiro produto deve ser "Celular"');
+    });
+
+    // Iniciar o QUnit
+    QUnit.start();
+  </script>
+</body>
+</html>

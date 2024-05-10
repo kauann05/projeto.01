@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+<link rel="stylesheet" href="css/redefinirSenha.css">
+    <script src="js/redefinirSenha.js"></script>
+</head>
+<body>
+    <div id="cabeca">
+        <div id="logo">EletroStudo!</div>
+    </div>
+    <div id="container">
+    <form id="redefinirSenhaForm" onsubmit="return esquecerSenha()">
+        <h2>REDEFINIR SENHA</h2>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" required><br><br>
+        <label for="novaSenha">Nova Senha:</label>
+        <input type="password" id="novaSenha" required><br><br>
+        <label for="confirmaNovaSenha">Confirme a Nova Senha:</label>
+        <input type="password" id="confirmaNovaSenha" required><br><br>
+        <input type="submit" value="Redefinir Senha">
+    </form>
+</div>
+</body>
+</html>

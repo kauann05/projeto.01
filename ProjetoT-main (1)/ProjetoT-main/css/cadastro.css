@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Remove a barra de rolagem */
+
+}
+
+#cabeca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color:  #00082e;;
+    color: #fff;
+    font-size: 18px;
+    /* Aumenta o tamanho da fonte */
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+h2 {
+    color:  #00082e;;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 1px;
+    font-family: Arial, sans-serif;
+
+}
+
+.container {
+    width: 450px;
+    /* Reduz a largura máxima */
+    height: 620px;
+    /* Define a altura automática para ajustar ao conteúdo */
+    margin: 30px auto;
+    padding: 30px;
+    /* Diminui o preenchimento interno */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+form {
+    width: 100%;
+}
+
+form p {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+label {
+    margin-bottom: 3px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+select {
+
+    padding: 8px;
+    /* Aumenta o tamanho do padding */
+    width: calc(100% - 14px);
+    /* Ajusta a largura do input */
+    margin-bottom: 0.1px;
+    /* Ajusta o espaço entre os inputs */
+    border: 1px solid #ccc;
+    /* Cor da borda */
+    border-radius: 5px;
+    /* Borda arredondada */
+    font-family: Arial, sans-serif;
+    /* Fonte */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    background-color: #f9f9f9;
+    /* Cor de fundo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transições suaves */
+    ;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color:  #00082e;;
+}
+
+#tipoCadastro {
+    width: calc(50% - 5px);
+}
+
+button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8a00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+
+}
+
+button[type="button"]:hover {
+    background-color:  #00082e;;
+    
+}
+
+.erros {
+    color: red;
+    margin-bottom: 10px;
+}

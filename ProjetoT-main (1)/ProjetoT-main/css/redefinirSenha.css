@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#cabeca {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #00082e;
+    color: #fff;
+    font-size: 18px;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color:  #00082e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+  
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    background-color: #fff;
+    width: 400px; /* Reduz a largura máxima */
+    height: 450px; /* Define a altura automática para ajustar ao conteúdo */
+    margin: 30px auto;
+    padding: 30px; /* Diminui o preenchimento interno */
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333; /* Cor do texto */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8a00; /* Cor de fundo do botão */
+     cursor: pointer;
+   color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #00082e;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+}
